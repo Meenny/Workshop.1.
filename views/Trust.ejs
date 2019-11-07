@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <title>คนที่ฉันไว้ใจ</title>
+</head>
+
+<body class="backgroud">
+    <%- include layout%>
+        <img src="/images/hiclipart.com-id_dhpvq.png" alt="" id="img6">
+        <h1 align="center" style="margin-top: 20px; color:#9A52C7;">คนที่ฉันไว้ใจ</h1>
+        <div class="container">
+            <div class="div6">
+                <form action="/trust" method="post">
+                    <div class="form-group">
+                        <label for=""><h3>Email address :</h3></label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for=""><h3>ชื่อ :</h3></label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for=""><h3>เกี่ยวข้องเป็น :</h3></label>
+                        <input type="text" name="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for=""><h3>เบอร์โทรศัพท์ :</h3></label>
+                        <input type="number" name="phonenumber" class="form-control">
+                    </div>
+                    <input type="submit" name="" id="" class="btn btn-lg btn-primary" value="Send">
+                </form>
+            </div>
+        </div>
+
+
+        <div class="container" style="margin-bottom: 50px;">
+            <h3>คนที่ไว้ใจ</h3>
+            <hr>
+
+            <% if(locals.data) { %>
+                <div class="row">
+                    <%Object.values(data).forEach(function(datad) { %>
+                        <div class="col-sm-4">
+                            <div class="card text-white bg-primary mb-3">
+                                <div class="card-header">
+                                    <%= datad.text %>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">Primary card title</h5> -->
+                                    <p class="card-text">ชื่อ:
+                                        <%= datad.name%>
+                                    </p>
+                                    <p class="card-text">Email:
+                                        <%= datad.email%>
+                                    </p>
+                                    <p class="card-text">เบอร์โทรศัพท์:
+                                        <%= datad.phonenumber%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+                <% } %>
+        </div>
+
+
+
+
+</body>
+
+</html>

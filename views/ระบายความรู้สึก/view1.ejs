@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>ระบายความรู้สึก</title>
+</head>
+
+<body class="backgroud">
+    <%- include ../layout%>
+
+        <img src="/images/hiclipart.com-id_cylxq.png" alt="" id="img7">
+        <h1 align="center" style="margin-top: 20px; color:#9A52C7;">ระบายความรู้สึก</h1>
+        <div class="container">
+            <div class="div6">
+                <form action="/users/feeling" method="post">
+                    <div class="form-group">
+                        <label for=""><h3>Email address :</h3></label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for=""><h3>วันเดือนปีที่บันทึก :</h3></label>
+                        <input type="date" name="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for=""><h3>ระบายความรู้สึก :</h3></label>
+                        <textarea name="feeling" id="" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+
+                    <input type="submit" name="" id="" class="btn btn-lg btn-primary" value="Send">
+                </form>
+            </div>
+        </div>
+        <div class="container" style="margin-bottom: 50px;">
+            <h3>ความรู้สึก</h3>
+            <hr>
+            <% if(locals.data){ %>
+                <div class="row">
+                    <% Object.values(data).forEach(function(datas){ %>
+                        <div class="form-group">
+                            <div class="card border-info mb-3">
+                                <h5 class="card-header">วันที่:
+                                    <%= datas.date%>
+                                </h5>
+                                <div class="card-body text-info">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <%= datas.feeling%>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+
+                </div>
+                <%}%>
+
+        </div>
+
+
+
+
+
+
+</body>
+
+</html
