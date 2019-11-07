@@ -15,11 +15,10 @@ router.get('/feeling', (req, res, next) => {
 })
 router.post('/feeling', (req, res, next) => {
     var doc = new Users(req.body);
-    doc.save();
-
-    res.location('/users/feeling')
+    doc.save()
     res.redirect('/users/feeling')
 });
+
 router.get('/encou', (req, res, next) => {
     res.render('ระบายความรู้สึก/view2.ejs')
 });
