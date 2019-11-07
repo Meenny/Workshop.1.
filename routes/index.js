@@ -51,6 +51,9 @@ router.get('/Christianity', (req, res, next) => {
 router.get('/Islam', (req, res, next) => {
     res.render('bud3')
 })
+router.get('/call', (req, res, next) => {
+    res.render('end')
+})
 
 
 module.exports = router;
