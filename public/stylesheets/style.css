@@ -122,9 +122,30 @@
     margin-top: 20px;
 }
 
-.card text-white bg-success mb-3 {
-    margin-top: 10 px;
+#img15 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 180px;
+    margin-bottom: 0;
+    /* height: 100%; */
 }
+
+#img16 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 50%;
+    margin-bottom: 0;
+    /* height: 100%; */
+}
+
+
+/* .card text-white bg-success mb-3 {
+    margin-top: 10 px;
+} */
 
 .text {
     padding: 40px;
@@ -209,4 +230,12 @@ h4 {
 h5 {
     font-size: 30px;
     color: #9A52C7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 100px;
 }
