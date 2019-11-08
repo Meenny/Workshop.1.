@@ -9,11 +9,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var mongoose = require('mongoose');
-mongoose.connect(Key.mongoURI, {
+mongoose.connect("mongodb+srv://admin:meen1234@cluster0-sufki.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 mongoose.Promise = global.Promise;
+
 
 var app = express();
 

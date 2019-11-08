@@ -16,6 +16,7 @@ router.get('/feeling', (req, res, next) => {
 router.post('/feeling', (req, res, next) => {
     var doc = new Users(req.body);
     doc.save()
+    res.location('/users/feeling')
     res.redirect('/users/feeling')
 });
 

@@ -32,6 +32,7 @@ router.post('/trust', (req, res, next) => {
     var doc = new User(req.body);
     doc.save()
     res.redirect('/trust')
+    res.redirect('/trust')
 })
 router.get('/monk', (req, res, next) => {
     res.render('view3')
