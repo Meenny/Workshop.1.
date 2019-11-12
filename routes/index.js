@@ -55,6 +55,9 @@ router.get('/Islam', (req, res, next) => {
 router.get('/call', (req, res, next) => {
     res.render('end')
 })
+router.get('/references', (req, res, next) => {
+    res.render('end2')
+})
 
 
 module.exports = router;
