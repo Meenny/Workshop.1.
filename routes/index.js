@@ -58,6 +58,8 @@ router.get('/call', (req, res, next) => {
 router.get('/references', (req, res, next) => {
     res.render('end2')
 })
-
+router.get('/test1', (req, res, next) => {
+    res.render('test1')
+})
 
 module.exports = router;
