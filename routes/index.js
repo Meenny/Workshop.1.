@@ -61,5 +61,8 @@ router.get('/references', (req, res, next) => {
 router.get('/test1', (req, res, next) => {
     res.render('test1')
 })
+router.get('/test2', (req, res, next) => {
+    res.render('test2')
+})
 
 module.exports = router;

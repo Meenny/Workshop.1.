@@ -271,3 +271,7 @@ h5 {
 h2 {
     font-size: 100px;
 }
+
+.navbar-brand {
+    font-size: 12px;
+}
